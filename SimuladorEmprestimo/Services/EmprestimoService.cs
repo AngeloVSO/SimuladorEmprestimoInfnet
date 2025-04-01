@@ -6,7 +6,7 @@ public class EmprestimoService : IEmprestimoService
     {
         if (string.IsNullOrWhiteSpace(nome))
         {
-            throw new ArgumentNullException(nameof(nome), "Nome deve ser informado.");
+            throw new ArgumentNullException(nameof(nome), "O nome deve ser informado.");
         }
 
         var random = new Random();

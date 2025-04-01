@@ -1,8 +1,10 @@
+using SimuladorEmprestimo.Services;
+
 namespace SimuladorEmprestimoTests;
 
 public class EmprestimoServiceTest
 {
-    private readonly EmprestimoService _service = new EmprestimoService();
+    private readonly EmprestimoService _service = new();
 
     [Fact]
     public void SimularEmprestimo_DeveRetornarResultado_QuandoNomeForValido()
@@ -20,7 +22,7 @@ public class EmprestimoServiceTest
     [InlineData(null)]
     public void SimularEmprestimo_DeveLancarArgumentNullException_QuandoNomeForInvalido(string nome)
     {
-        const string mensagemEsperada = "Nome deve ser informado.";
+        const string mensagemEsperada = "O nome deve ser informado.";
 
         var exception = Assert.Throws<ArgumentNullException>(() => _service.SimularEmprestimo(nome));
 
