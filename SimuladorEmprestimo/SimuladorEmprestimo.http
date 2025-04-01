@@ -1,0 +1,6 @@
+@SimuladorEmprestimo_HostAddress = http://localhost:5234
+
+GET {{SimuladorEmprestimo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
